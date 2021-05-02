@@ -1,0 +1,203 @@
+:root {
+  --main-color: rgb(250, 255, 250);
+  --text-color: rgba(0, 0, 0, 0.7);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Crimson Pro", sans-serif;
+  font-size: 18px;
+}
+::selection {
+  color: var(--main-color);
+  background: rgb(107, 107, 127);
+}
+::-moz-selection {
+  color: var(--main-color);
+  background: rgb(107, 107, 127);
+}
+html body {
+  height: 100vh;
+}
+main {
+  height: auto;
+  min-height: 100vh;
+  min-width: 290px;
+  background: var(--main-color);
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar {
+  height: 9vh;
+  min-height: 50px;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: linear-gradient(
+    to bottom,
+    rgba(40, 80, 48, 0.9),
+    rgba(10, 40, 14, 0.8)
+  );
+  box-shadow: 0px 1px 4px rgba(20, 20, 24, 0.5);
+  z-index: 3;
+}
+.middle-section {
+  height: auto;
+  width: 70vw;
+  padding: 1rem 0rem 1rem 0rem;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.footer {
+  height: 5vh;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(40, 80, 48, 0.9),
+    rgba(10, 40, 14, 0.8)
+  );
+  box-shadow: 0px 1px 6px rgba(10, 10, 14, 0.8);
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.logo {
+  height: 100%;
+  width: 25rem;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.logo:hover {
+  cursor: pointer;
+}
+
+#logo-name {
+  font-family: "Merriweather", serif;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 6px rgba(160, 160, 164, 0.5);
+  color: var(--main-color);
+  position: relative;
+  right: 1rem;
+}
+#copy {
+  color: var(--main-color);
+  text-shadow: 0px 0px 6px gray;
+  text-align: center;
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 6px rgba(10, 10, 14, 0.6);
+}
+#copy-link {
+  color: var(--main-color);
+  font-size: 0.8rem;
+}
+.buttons {
+  height: 100%;
+  max-height: 5.5rem;
+  width: 50%;
+  min-width: 460px;
+  display: flex;
+  /*padding: 0.7rem;*/
+  justify-content: middle;
+}
+
+.menu {
+  width: 30%;
+}
+#button1,
+#button2,
+#button3 {
+  height: 96%;
+  width: 100%;
+  background: transparent;
+  font-size: 1.4rem;
+  text-shadow: 0px 0px 6px gray;
+  /*box-shadow: 0.6px 0.6px 1px darkgray, 0px 0px 2px gray;*/
+  border: none;
+  color: var(--main-color);
+  /*border-radius: 8px;*/
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+#button1:hover,
+#button2:hover,
+#button3:hover {
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, rgba(255, 241, 233, 0.3));
+  text-shadow: 0px 0px 6px var(--main-color);
+  cursor: pointer;
+}
+
+/************Home*******************/
+#homeMid {
+  width: 80vw;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+}
+.me {
+  overflow: hidden;
+  height: 16rem;
+  width: 16rem;
+  /* clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+  /* border-radius: 50%; */
+  /*box-shadow: 0px 0px 4px 2px black;*/
+  filter: blur(0.2px);
+  pointer-events: none;
+}
+.about-me {
+  width: 50vw;
+  min-width: 260px;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 3px rgba(10, 10, 14, 0.6);
+}
+.normalText {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 2px rgba(10, 10, 14, 0.6);
+}
+#my-photo {
+  width: 16rem;
+  height: auto;
+  /*border-radius: 50%;*/
+  text-shadow: 1px 1px 6px rgba(10, 10, 14, 0.6);
+}
+#home-heading {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 1rem;
+}
